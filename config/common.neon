@@ -22,11 +22,12 @@ services:
 
 extensions:
     console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
-    # Common
+
+      # Common
     nettrine.annotations: Nettrine\Annotations\DI\AnnotationsExtension
     nettrine.cache: Nettrine\Cache\DI\CacheExtension
     nettrine.migrations: Nettrine\Migrations\DI\MigrationsExtension
-    #    nettrine.fixtures: Nettrine\Fixtures\DI\FixturesExtension
+    nettrine.fixtures: Nettrine\Fixtures\DI\FixturesExtension
 
     # DBAL
     nettrine.dbal: Nettrine\DBAL\DI\DbalExtension
@@ -38,7 +39,10 @@ extensions:
     nettrine.orm.console: Nettrine\ORM\DI\OrmConsoleExtension
     nettrine.orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
 
-
+#
+nettrine.orm.annotations:
+    mapping:
+        App\Model\Database: %appDir%/Model/Database
 
 nettrine.dbal:
     debug:
@@ -53,6 +57,11 @@ nettrine.dbal:
 
 nettrine.migrations:
     directory: App/migrations
+
+#nettrine.annotations:
+#  debug: %debugMode%
+#  ignore: [author, since, see]
+#  cache: Doctrine\Common\Cache\PhpFileCache(%tempDir%/cache/doctrine)
 
 console:
     name: Edu project
