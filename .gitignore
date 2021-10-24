@@ -1,4 +1,4 @@
 config/local.neon
 /vendor/
 /temp/
-/.idea
+/.idea/
