@@ -2,3 +2,4 @@ app/config/local.neon
 /vendor/
 /temp/
 /.idea/
+/node_modules/

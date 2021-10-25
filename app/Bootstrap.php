@@ -9,8 +9,8 @@ use Nette\Bootstrap\Configurator;
 
 class Bootstrap
 {
-	public static function boot(): Configurator
-	{
+    public static function boot(): Configurator
+    {
         $configurator = new Configurator;
         $appDir = __DIR__;
 
@@ -29,5 +29,5 @@ class Bootstrap
         $configurator->addConfig($appDir . '/config/local.neon');
 
         return $configurator;
-	}
+    }
 }
